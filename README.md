@@ -13,7 +13,7 @@
   Clone o projeto e acesse a pasta:
 
   ```bash
-  $ git clone https://github.com/bgv18/ProjetoOficinaDeIntegracao2 && cd ProjetoOficinaDeIntegracao2
+  $ git clone https://github.com/bgv18/alset.git && cd alset.git
   ```
   Para o controle das versões, utilize os commits com descrição, exemplo:
   ```bash
