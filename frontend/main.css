@@ -1,0 +1,38 @@
+body {
+    background-image: url('./img/backgroundIndex.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+}
+
+#header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+}
+
+.btn-header {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.btn-header a {
+    text-decoration: none;
+    color: white;
+}
+.btn-header:hover {
+    border: 2px solid rgba(255, 255, 255, 0.726);
+    color: rgba(255, 255, 255, 0.726);
+}
+
+.content-txt {
+    font-size: 5em;
+    color: white;
+    margin-left: 10%;
+    margin-top: 10%;
+}
