@@ -1,5 +1,5 @@
 const sequelize = require('sequelize');
-const database = require('./db');
+const database = require('../db');
 const Professor = database.define('professor',
 {
     ID:{
@@ -22,6 +22,10 @@ const Professor = database.define('professor',
     },
     DataCriacao: {
         type: sequelize.DATE,
+        allowNull: false
+    },
+    Senha: {
+        type: sequelize.STRING,
         allowNull: false
     }
 })

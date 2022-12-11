@@ -1,24 +1,17 @@
-(async() => 
-{
-    const database = require('./db');
-    const professor = require('./professor');
+const express = require("express");
+const app = express();
+const cors = require("cors");
 
-    await database.sync();
+app.use(express.json());
+app.use(cors());
 
-    await database.create({
-        Nome: "Bruno Guerra",
-        CPF: 12345678912,
-        Ativo: true,
-        DataCriacao: Date()
-    })
+const db = require("./models");
 
-    const alterProfessor = await professor.findByPk(2);
-    alterProfessor.Nome = "Bruno";
-    await alterProfessor.save();
+const professorRouter = require("./routes/professor");
+app.use("/professor", professorRouter);
 
-    professor.destroy({where: {id: 1}});
-
-    const buscaTodosProfessores = await professor.findAll();
-
-
-})();
+db.sequelize.sync().then(() => {
+    app.listen(3001, () => {
+        console.log("Servidor rodando na porta 3001");
+    });
+});
